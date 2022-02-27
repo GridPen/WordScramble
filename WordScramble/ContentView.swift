@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-        
+        List{
+            ForEach(0...10, id: \.self) {
+                Text("Dynamic text \($0)")
+            }
+        }
     }
 }
 
